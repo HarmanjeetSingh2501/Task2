@@ -1,0 +1,55 @@
+/* Navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+    margin-bottom: 1rem; /* Adjust margin as needed */
+    border-bottom: 1px solid #e5e7eb;
+    width: 100%; /* Ensure the navbar spans the full width */
+    overflow-x: auto; /* Allow horizontal scrolling on smaller screens */
+  }
+  
+  .navbar button {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    background-color: #e5e7eb;
+    color: #374151;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .navbar button + button {
+    border-left: 1px solid #e5e7eb;
+  }
+  
+  .navbar .active {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-wrap: wrap; /* Allow items to wrap into a new line */
+      justify-content: center; /* Center items in a single line */
+      overflow-x: auto; /* Allow horizontal scrolling */
+      gap: 1rem; /* Add gap between items */
+      padding: 0.5rem; /* Add padding around the navbar */
+    }
+  
+    .navbar button {
+      flex: none; /* Prevent buttons from stretching */
+      width: auto; /* Allow buttons to shrink to content */
+      margin: 0.25rem; /* Adjust margin between buttons */
+    }
+  
+    .navbar button + button {
+      border-left: none; /* Remove border between buttons */
+      margin-left: 0; /* Reset margin between buttons */
+    }
+  }
+  
